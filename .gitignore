@@ -1,1 +1,15 @@
+# --- Python build/cache ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+.venv/
+env/
+venv/
+
+# --- OS / editor noise ---
 .DS_Store
+.vscode/
+
