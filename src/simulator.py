@@ -67,21 +67,21 @@ def preanm_simulator(true_function="softplus", n=10000, x_lower=0, x_upper=2, no
     
 
 
-def binary_simulator(generator_function="cubic", n=10000, x_lower=0, x_upper=2, noise_std=1, noise_dist="gaussian", train=True, device=torch.device("cpu")):
-    """Data simulator for a binary classification task.
+def binary_simulator(generator_function="cubic", n=10000, x_lower=0, x_upper=1, noise_std=1, noise_dist="gaussian", train=True, device=torch.device("cpu")):
+    """Data simulator for a binary pre-additive noise model..
 
     Args:
-        generator_function (str, optional): generator function g^\star. Defaults to "softplus". Choices: ["softplus", "cubic","square", "log"].
+        generator_function (str, optional): generator function g^\star. Defaults to "cubic". Choices: ["cubic", "log"].
         n (int, optional): sample size. Defaults to 10000.
         x_lower (int, optional): lower bound of the training support. Defaults to 0.
-        x_upper (int, optional): upper bound of the training support. Defaults to 2.
+        x_upper (int, optional): upper bound of the training support. Defaults to 1.
         noise_std (int, optional): standard deviation of the noise. Defaults to 1.
         noise_dist (str, optional): noise distribution. Defaults to "gaussian". Choices: ["gaussian", "uniform"].
         train (bool, optional): generate data for training. Defaults to True.
         device (str or torch.device, optional): device. Defaults to torch.device("cpu").
 
     Returns:
-        tuple of torch.Tensors: data simulated from a pre-ANM.
+        tuple of torch.Tensors: data simulated from a binary pre-ANM.
     """
     if isinstance(generator_function, str):
         if generator_function == "cubic":
