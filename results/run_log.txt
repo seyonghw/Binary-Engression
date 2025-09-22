@@ -1,0 +1,4 @@
+Range of x: (71.0000, 202.0000)
+Evaluation range: (61.0000, 212.0000)
+Figure: /Users/seyonghw/Desktop/Binary_Engression/results/prob_vs_thalach.png
+Predictions: /Users/seyonghw/Desktop/Binary_Engression/results/predictions.csv
